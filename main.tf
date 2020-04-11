@@ -15,11 +15,11 @@ variable "project" {
   default = "fiap-lab"
 }
 
-data "aws_vpc" "vpc" {
-  tags = {
-    Name = "${var.project}"
-  }
-}
+#data "aws_vpc" "vpc" {
+#  tags = {
+#    Name = "${var.project}"
+#  }
+#}
 
 data "aws_subnet_ids" "all" {
   vpc_id = "${data.aws_vpc.vpc.id}"
